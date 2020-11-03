@@ -1,7 +1,7 @@
 module.exports = {
   plugins: ["prettier"],
   rules: {
-    "prettier/prettier": "off",
+    "prettier/prettier": "error",
     "arrow-body-style": 0,
     curly: 0,
     "lines-around-comment": 0,
