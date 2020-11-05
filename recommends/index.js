@@ -3,7 +3,7 @@ module.exports = {
     "./eslint",
     "./standard",
     "./prettier",
-    "./react/react",
+    "./react",
     "./react/hooks",
   ].map((e) => require.resolve(e)),
 };

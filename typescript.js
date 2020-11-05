@@ -1,9 +1,11 @@
 const getBaseOptions = require("./get-base-options");
 
 module.exports = {
-  parser: "babel-eslint",
-  ...getBaseOptions({ env: "js" }),
-  extends: "./recommends",
+  parser: "@typescript-eslint/parser",
+  extends: ["./recommends", "./recommends/typescript"].map((e) =>
+    require.resolve(e)
+  ),
+  ...getBaseOptions({ env: "ts" }),
   plugins: [
     "jsx-a11y",
     "react",
@@ -12,7 +14,7 @@ module.exports = {
     "node",
     "promise",
     "standard",
+    "@typescript-eslint",
   ],
   rules: {},
-  overrides: [],
 };
